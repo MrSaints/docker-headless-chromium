@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  website_to_pdf:
+    build:
+      context: .
+      dockerfile: "Dockerfile"
+    command: "node websiteToPDF.js"
+    links:
+      - chromium
+    volumes:
+      - ./websiteToPDF.js:/examples/websiteToPDF.js:ro
+  chromium:
+    image: "mrsaints/headless-chromium"
+    volumes:
+      - /dev/shm:/dev/shm
