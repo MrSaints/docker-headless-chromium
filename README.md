@@ -8,7 +8,7 @@ It is built on `debian:stable-slim`.
 ## Install
 
 ```
-docker pull mrsaints/docker-headless-chromium
+docker pull mrsaints/headless-chromium
 ```
 
 
